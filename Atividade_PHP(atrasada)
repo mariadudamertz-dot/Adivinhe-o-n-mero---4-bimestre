@@ -1,0 +1,28 @@
+<?php
+
+$chute = 0;
+
+$escolha1 = readline ("qual numero de inicio \n");
+
+$escolha2 = readline ("qual numero de final \n");
+$vezesjogadas = 0;
+
+$num_aleatorio = rand ($escolha1,$escolha2);
+
+while ($chute != $num_aleatorio) {
+
+ $chute = (int) readline ("diga um numero \n");
+  $vezesjogadas = $vezesjogadas + 1;
+
+ if ($chute === $num_aleatorio){
+    print "\nCORREEETOOOO!!!!\n";
+    print "foram $vezesjogadas tentativas.";
+     } else {
+      if ( $chute > $num_aleatorio ){
+        print "\nerrou..  mais baixo\n";
+
+          } else {
+            print "\nerrou... mais alto\n";
+      }  
+   }
+}
